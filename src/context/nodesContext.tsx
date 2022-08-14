@@ -41,7 +41,7 @@ export const NodesLoader: React.FC<Props> = ({ children }) => {
     { retry: false }
   );
 
-  if (nodesQuery.isLoading || linksQuery.isLoading) return <div>Loading...</div>;
+  if (nodesQuery.isLoading || linksQuery.isLoading) return <div>Loading nodes...</div>;
   if (nodesQuery.isError || linksQuery.isError)
     return (
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">

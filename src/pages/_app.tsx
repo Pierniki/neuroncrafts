@@ -2,9 +2,7 @@
 import { withTRPC } from '@trpc/next';
 import { SessionProvider } from 'next-auth/react';
 import type { AppType } from 'next/dist/shared/lib/utils';
-import { useQuery } from 'react-query';
 import superjson from 'superjson';
-import { z } from 'zod';
 import { NodesLoader } from '../context/nodesContext';
 import type { AppRouter } from '../server/router';
 import '../styles/globals.css';
