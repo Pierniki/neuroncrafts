@@ -1,0 +1,86 @@
+﻿[
+    {
+        "source": "Home",
+        "target": "Neutral"
+    },
+    {
+        "source": "Neutral",
+        "target": "Exit"
+    },
+    {
+        "source": "Neutral",
+        "target": "Entry"
+    },
+    {
+        "source": "Entry",
+        "target": "NeuronCrafts"
+    },
+    {
+        "source": "Entry",
+        "target": "Adam"
+    },
+    {
+        "source": "Entry",
+        "target": "Game"
+    },
+    {
+        "source": "Adam",
+        "target": "Contact"
+    },
+    {
+        "source": "Contact",
+        "target": "Phone"
+    },
+    {
+        "source": "Contact",
+        "target": "LinkedIn"
+    },
+    {
+        "source": "Adam",
+        "target": "Consultancy"
+    },
+    {
+        "source": "Consultancy",
+        "target": "SAP"
+    },
+    {
+        "source": "Consultancy",
+        "target": "BW"
+    },
+    {
+        "source": "BW",
+        "target": "4/HANA"
+    },
+    {
+        "source": "BW",
+        "target": "onHANA"
+    },
+    {
+        "source": "BW",
+        "target": "NW7.X"
+    },
+    {
+        "source": "Game",
+        "target": "Prime"
+    },
+    {
+        "source": "Game",
+        "target": "EulerIdentity"
+    },
+    {
+        "source": "Game",
+        "target": "Quantum"
+    },
+    {
+        "source": "NeuronCrafts",
+        "target": "Views"
+    },
+    {
+        "source": "NeuronCrafts",
+        "target": "Ideas"
+    },
+    {
+        "source": "NeuronCrafts",
+        "target": "Consultancy"
+    }
+]

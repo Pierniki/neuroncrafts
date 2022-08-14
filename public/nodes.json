@@ -1,0 +1,117 @@
+﻿[
+    {
+        "name": "Home",
+        "color": "#354259",
+        "text": "Welcome to NeuronCrafts"
+    },
+    {
+        "name": "NeuronCrafts",
+        "color": "#354259",
+        "text": "The company established to function in the system, by helping others understanding theirs own systems."
+    },
+    {
+        "name": "Views",
+        "color": "#354259",
+        "text": "List of important views"
+    },
+    {
+        "name": "About",
+        "color": "#354259",
+        "text": "Basic information"
+    },
+    {
+        "name": "Neutral",
+        "color": "#354259",
+        "text": "Wolrd needs neutral states"
+    },
+    {
+        "name": "Exit",
+        "color": "#354259",
+        "text": "Farewell"
+    },
+    {
+        "name": "Entry",
+        "color": "#354259",
+        "text": "Come in"
+    },
+    {
+        "name": "Ideas",
+        "color": "#354259",
+        "text": "List of current ideas"
+    },
+    {
+        "name": "Quantum",
+        "color": "#354259",
+        "text": "A quantum is the minimum amount of anything that matters"
+    },
+    {
+        "name": "Game",
+        "color": "#354259",
+        "text": "A game is the goal oriented set of dimensional rules"
+    },
+    {
+        "name": "Consultancy",
+        "color": "#354259",
+        "text": "An organized transfer of information between the parties"
+    },
+    {
+        "name": "System",
+        "color": "#354259",
+        "text": "Set of primes related elements dimensionaly related "
+    },
+    {
+        "name": "SAP",
+        "color": "#354259",
+        "text": "World's leading enterprise resource planning software vendor"
+    },
+    {
+        "name": "BW",
+        "color": "#354259",
+        "text": "Business Warehouse is a model-driven data warehousing product"
+    },
+    {
+        "name": "4/HANA",
+        "color": "#354259",
+        "text": "SAP BW/4HANA is a packaged data warehouse based on SAP HANA; it allows you to consolidate data across the enterprise to get a consistent, agreed-upon view of your data."
+    },
+    {
+        "name": "onHANA",
+        "color": "#354259",
+        "text": "SAP HANA based platform"
+    },
+    {
+        "name": "NW7.X",
+        "color": "#354259",
+        "text": "SAP NetWeaver ABAP platform"
+    },
+    {
+        "name": "Contact",
+        "color": "#354259",
+        "text": "Ways of reaching out"
+    },
+    {
+        "name": "Phone",
+        "color": "#354259",
+        "text": "+48795891595"
+    },
+    {
+        "name": "Adam",
+        "color": "#354259",
+        "text": "Adam Tomalak is SAP BW Consultant with strong development and support background"
+    },
+    {
+        "name": "EulerIdentity",
+        "color": "#354259",
+        "text": "MathFunction"
+    },
+    {
+        "name": "Prime ",
+        "color": "#354259",
+        "text": "MathFunction"
+    },
+    {
+        "name": "LinkedIn",
+        "color": "#354259",
+        "text": "www.linkedin.com/in/adam-tomalak-722a5665"
+    }
+]
