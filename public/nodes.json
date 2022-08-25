@@ -1,10 +1,5 @@
 ﻿[
     {
-        "name": "Home",
-        "color": "#354259",
-        "text": "Welcome to NeuronCrafts"
-    },
-    {
         "name": "NeuronCrafts",
         "color": "#354259",
         "text": "The company established to function in the system, by helping others understanding theirs own systems."
@@ -22,7 +17,7 @@
     {
         "name": "Neutral",
         "color": "#354259",
-        "text": "Wolrd needs neutral states"
+        "text": "World needs neutral states"
     },
     {
         "name": "Exit",
@@ -105,7 +100,7 @@
         "text": "MathFunction"
     },
     {
-        "name": "Prime ",
+        "name": "Prime",
         "color": "#354259",
         "text": "MathFunction"
     },

@@ -1,9 +1,13 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { z, ZodError } from 'zod';
-import create from 'zustand';
 
-const nodeSchema = z.object({ name: z.string(), color: z.string().length(7).startsWith('#'), text: z.string() });
+const nodeSchema = z.object({
+  name: z.string(),
+  color: z.string().length(7).startsWith('#'),
+  text: z.string(),
+  id: z.string()
+});
 const nodesSchema = z.array(nodeSchema);
 export type Node = z.infer<typeof nodeSchema>;
 
@@ -28,7 +32,7 @@ export const NodesLoader: React.FC<Props> = ({ children }) => {
     () =>
       fetch('nodes.json')
         .then((res) => res.json())
-        .then((res) => nodesSchema.parseAsync(res)),
+        .then((res) => nodesSchema.parseAsync(res.map((item: any) => ({ ...item, id: item.name.toLowerCase() })))),
     { retry: false }
   );
 
@@ -37,7 +41,11 @@ export const NodesLoader: React.FC<Props> = ({ children }) => {
     () =>
       fetch('stories.json')
         .then((res) => res.json())
-        .then((res) => linksSchema.parseAsync(res)),
+        .then((res) =>
+          linksSchema.parseAsync(
+            res.map((item: any) => ({ ...item, source: item.source.toLowerCase(), target: item.target.toLowerCase() }))
+          )
+        ),
     { retry: false }
   );
 

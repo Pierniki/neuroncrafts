@@ -1,9 +1,5 @@
 ﻿[
     {
-        "source": "Home",
-        "target": "Neutral"
-    },
-    {
         "source": "Neutral",
         "target": "Exit"
     },

@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
 import { Session } from 'next-auth';
-import { signIn, useSession, signOut } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { SessionNextPage } from '../components/AppLayout';
 
-const Home: NextPage = () => {
-  const sessionQuery = useSession();
+import Image from 'next/image';
 
+const Home: SessionNextPage<{}> = (props) => {
   return (
     <>
       <Head>
@@ -15,13 +15,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen flex flex-col">
-        <nav className="h-12 shadow-sm flex justify-end items-center px-8">
-          {sessionQuery.status === 'authenticated' && <button onClick={() => signOut()}>Logout</button>}
-        </nav>
-        <main className="container mx-auto flex flex-col items-center justify-center p-4 flex-1">
-          <h1 className="text-lg">Neuroncrafts</h1>
-          <SessionInfo status={sessionQuery.status} session={sessionQuery.data} />
+      <div className="flex flex-col flex-1">
+        <main
+          className="container mx-auto flex flex-col items-center justify-start p-4 flex-1"
+          style={{ paddingTop: '20vh' }}
+        >
+          <div className=" mb-12  text-center ">
+            <h1 className="text-4xl  mb-2">
+              Welcome to <span className="font-bold">Neuroncrafts</span>
+            </h1>
+            {props.session?.user?.name && <span className="text-2xl">{props.session?.user?.name}!</span>}
+          </div>
+          <SessionInfo {...props} />
         </main>
       </div>
     </>
@@ -35,15 +40,21 @@ const SessionInfo: React.FC<{
   if (status === 'loading') return <p>Loading...</p>;
   if (status === 'unauthenticated')
     return (
-      <button type="submit" onClick={() => signIn('github')}>
-        Login with Github
+      <button
+        type="submit"
+        onClick={() => signIn('github')}
+        className="rounded-full flex flex-col items-center justify-center  bg-gray-200 w-56 h-56 hover:scale-125 duration-500"
+      >
+        Login with
+        <span className="font-bold text-3xl">Github</span>
       </button>
     );
   return (
     <>
-      <p>{session?.user?.name}</p>
-      <Link href={'/Home'}>
-        <button>Enter</button>
+      <Link href={'/neutral'}>
+        <button className="rounded-full text-3xl flex flex-col items-center justify-center font-bold  bg-gray-200 w-56 h-56 hover:scale-125 duration-500">
+          Enter
+        </button>
       </Link>
     </>
   );
