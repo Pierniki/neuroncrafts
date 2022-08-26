@@ -6,7 +6,11 @@ const nodeSchema = z.object({
   name: z.string(),
   color: z.string().length(7).startsWith('#'),
   text: z.string(),
-  id: z.string()
+  id: z.string(),
+  backgroundUrl: z.string().optional(),
+  textColor: z.string().length(7).startsWith('#').optional(),
+  videoEmbedId: z.string().optional(),
+  scale: z.number().optional()
 });
 const nodesSchema = z.array(nodeSchema);
 export type Node = z.infer<typeof nodeSchema>;

@@ -61,6 +61,10 @@
     },
     {
         "source": "Game",
+        "target": "VideoTest"
+    },
+    {
+        "source": "Game",
         "target": "EulerIdentity"
     },
     {

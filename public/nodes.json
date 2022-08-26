@@ -42,7 +42,9 @@
     {
         "name": "Game",
         "color": "#354259",
-        "text": "A game is the goal oriented set of dimensional rules"
+        "text": "A game is the goal oriented set of dimensional rules",
+        "textColor": "#000000",
+        "backgroundUrl": "/test-bg.jpg"
     },
     {
         "name": "Consultancy",
@@ -103,6 +105,13 @@
         "name": "Prime",
         "color": "#354259",
         "text": "MathFunction"
+    },
+    {
+        "name": "VideoTest",
+        "color": "#354259",
+        "text": "",
+        "videoEmbedId": "stNnNjM-Rhk",
+        "scale": 1.5
     },
     {
         "name": "LinkedIn",

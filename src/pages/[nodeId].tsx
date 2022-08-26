@@ -5,10 +5,11 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { SessionNextPage } from '../components/AppLayout';
+import { Video } from '../components/Video';
 import { Node, useNodes } from '../context/nodesContext';
 
 const ProtectedNodePage: SessionNextPage<{}> = (props) => {
-  if (props.status !== 'authenticated') return <h5>Unauthorized</h5>;
+  if (props.status === 'unauthenticated') return <h5>Unauthorized</h5>;
   return <NodePage />;
 };
 
@@ -167,10 +168,10 @@ const NodeStage: React.FC<{
             <Node
               {...node}
               key={'node-' + node.id}
-              height={r * 2}
-              width={r * 2}
-              left={(node.x ?? 0) - r}
-              top={(node.y ?? 0) - r}
+              height={r * 2 * (node.scale ?? 1)}
+              width={r * 2 * (node.scale ?? 1)}
+              left={(node.x ?? 0) - r * (node.scale ?? 1)}
+              top={(node.y ?? 0) - r * (node.scale ?? 1)}
             />
           );
         })}
@@ -188,19 +189,36 @@ const Node: React.FC<AnimationNode & { height: number; width: number; left: numb
   height,
   width,
   left,
-  top
+  top,
+  backgroundUrl,
+  textColor,
+  videoEmbedId
 }) => {
   const Content = (
     <div
-      style={{ height, width, left, top, backgroundColor: color, pointerEvents: 'all' }}
-      className={`rounded-full  flex justify-center items-center absolute duration-500 overflow-hidden text-white font-bold text-3xl group ${
+      style={{
+        height,
+        width,
+        left,
+        top,
+        backgroundColor: color,
+        pointerEvents: 'all',
+        backgroundImage: `url(${backgroundUrl})`,
+        color: textColor
+      }}
+      className={`rounded-full  flex justify-center items-center absolute duration-500 overflow-hidden text-white font-bold text-3xl bg-center bg-cover group ${
         hasChildren ? 'hover:scale-125 cursor-pointer' : 'cursor-default scale-90 opacity-90'
       }`}
     >
-      <span className="group-hover:translate-y-64 duration-500 transition-transform absolute">{name}</span>
-      <p className="absolute -translate-y-64 group-hover:translate-y-0 duration-500 text-center text-sm font-normal p-8">
+      {!videoEmbedId && (
+        <span className="group-hover:translate-y-64 duration-500 transition-transform absolute pointer-events-none">
+          {name}
+        </span>
+      )}
+      <p className="absolute -translate-y-64 group-hover:translate-y-0 duration-500 text-center text-sm font-normal p-8 pointer-events-none">
         {text}
       </p>
+      {videoEmbedId && <Video embedId={videoEmbedId} width={width * 1.9} height={height} />}
     </div>
   );
   if (!hasChildren) return Content;
